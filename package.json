@@ -1,0 +1,29 @@
+{
+  "name": "react-fun",
+  "version": "1.0.0",
+  "description": "React trials.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adam-back/react.git"
+  },
+  "author": "Adam Back",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adam-back/react/issues"
+  },
+  "homepage": "https://github.com/adam-back/react#readme",
+  "dependencies": {
+    "babel-preset-react": "^6.3.13",
+    "babelify": "^7.2.0",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-livereload": "^3.8.1"
+  }
+}
