@@ -1,4 +1,5 @@
 var React = require( 'react' );
+var RestartButton = require( './RestartButton' );
 
 function puke ( obj ) {
   return <pre>{JSON.stringify( obj, null, ' ' ) }</pre>
@@ -11,7 +12,10 @@ function ConfirmBattle ( props ) {
     );
   } else {
     return (
-      <div> CONFIRM BATTLE: { puke( props ) } </div>
+      <div>
+        <div>CONFIRM BATTLE: { puke( props ) }</div>
+        <RestartButton />
+      </div>
     );
   }
 };
