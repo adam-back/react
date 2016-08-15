@@ -1,12 +1,18 @@
 var styles = {
+  helvetica: {
+    fontFamily: "'Helvetica', Arial, 'san-serif'"
+  },
   columnFlex: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-around',
     alignItems: 'center'
   },
-  centerFlexColumn: {
-
+  inputStyle: {
+    fontSize: '1em',
+    borderRadius: '.2em',
+    border: '1px solid #ccc',
+    padding: '.4em'
   },
   topAndBottomMargin: {
     margin: '1em 0',

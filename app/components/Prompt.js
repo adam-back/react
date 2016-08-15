@@ -12,7 +12,7 @@ function Prompt ( props ) {
           type="text"
           onChange={ props.onUpdateUser }
           value={ props.username }
-          style={ Object.assign( {}, styles.topAndBottomMargin, styles.centerText ) }/>
+          style={ Object.assign( styles.topAndBottomMargin, styles.centerText, styles.inputStyle ) }/>
         <button
           type="submit"
           style={ Object.assign( styles.greenBg, styles.defaultButton ) }>

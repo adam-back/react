@@ -12,13 +12,20 @@ function ConfirmBattle ( props ) {
     );
   } else {
     return (
-      <div style={ Object.assign( {}, styles.columnFlex ) }>
+      <div style={ styles.columnFlex }>
         <h1>CONFIRM BATTLE</h1>
         <PlayerList players={ props.playersInfo } />
+        <button onClick={ props.onInitiateBattle } style={ Object.assign( styles.greenBg, styles.defaultButton ) }>Initiate Battle</button>
         <RestartButton />
       </div>
     );
   }
+};
+
+ConfirmBattle.propTypes = {
+  isLoading: React.PropTypes.bool.isRequired,
+  playersInfo: React.PropTypes.array.isRequired,
+  onInitiateBattle: React.PropTypes.func.isRequired
 };
 
 module.exports = ConfirmBattle;

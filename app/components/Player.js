@@ -1,4 +1,5 @@
 var React = require( 'react' );
+var PropTypes = React.PropTypes;
 var styles = require( '../styles' );
 
 function Player ( props ) {
@@ -6,6 +7,7 @@ function Player ( props ) {
 
   return (
     <div style={ styles.columnFlex }>
+      {props.score && <h1>Score: { props.score }</h1>}
       <h2>{ user.name }</h2>
       <img src={ user.avatar_url } style={ styles.squarePhoto } />
       <div>Username: { user.login }</div>
@@ -15,6 +17,17 @@ function Player ( props ) {
       </div>}
     </div>
   );
+};
+
+Player.propTypes = {
+  score: PropTypes.number,
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    'avatar_url': PropTypes.string.isRequired,
+    login: PropTypes.string.isRequired,
+    location: PropTypes.string,
+    company: PropTypes.string
+  })
 };
 
 module.exports = Player;
