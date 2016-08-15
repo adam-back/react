@@ -1,19 +1,20 @@
 var React = require( 'react' );
 var RestartButton = require( './RestartButton' );
-
-function puke ( obj ) {
-  return <pre>{JSON.stringify( obj, null, ' ' ) }</pre>
-};
+var PlayerList = require( './PlayerList' );
+var styles = require( '../styles' );
 
 function ConfirmBattle ( props ) {
   if ( props.isLoading === true ) {
     return (
-      <div> LOADING </div>
+      <div style={ styles.columnFlex }>
+        <h1>LOADING...</h1>
+      </div>
     );
   } else {
     return (
-      <div>
-        <div>CONFIRM BATTLE: { puke( props ) }</div>
+      <div style={ Object.assign( {}, styles.columnFlex ) }>
+        <h1>CONFIRM BATTLE</h1>
+        <PlayerList players={ props.playersInfo } />
         <RestartButton />
       </div>
     );

@@ -15,6 +15,11 @@ var styles = {
   },
   transparentBg: {
     background: 'transparent'
+  },
+  squarePhoto: {
+    width: '10em',
+    height: '10em',
+    borderRadius: '2em'
   }
 };
 
