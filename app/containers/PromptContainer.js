@@ -1,5 +1,5 @@
 var React = require( 'react' );
-var styles = require( '../styles' );
+var Prompt = require( '../components/Prompt' );
 var Router = require( 'react-router' );
 var Link = Router.Link;
 
@@ -12,12 +12,12 @@ var PromptContainer = React.createClass({
       username: ''
     };
   },
-  onUpdateUser: function( event ) {
+  handleUpdateUser: function( event ) {
     this.setState({
       username: event.target.value
     });
   },
-  onSubmitUser: function( event ) {
+  handleSubmitUser: function( event ) {
     event.preventDefault();
     var username = this.state.username;
     this.setState({
@@ -26,30 +26,26 @@ var PromptContainer = React.createClass({
 
     if ( this.props.routeParams.playerOne ) {
       // go to battle
-      console.log( this.context );
+      this.context.router.push({
+        pathname: '/battle',
+        query: {
+          playerOne: this.props.routeParams.playerOne,
+          playerTwo: this.state.username
+        }
+      });
     } else {
       // go to player two
-      console.log( this.context );
+      this.context.router.push( '/playerTwo/' + this.state.username );
     }
   },
   render: function() {
     return (
-      <div style={ styles.columnFlex }>
-        <h1>{ this.props.route.header }</h1>
-        <form style={ styles.columnFlex } onSubmit={ this.onSubmitUser }>
-          <input
-            placeholder="GitHub Username"
-            type="text"
-            onChange={ this.onUpdateUser }
-            value={ this.state.username }
-            style={ Object.assign( {}, styles.topAndBottomMargin, styles.centerText ) }/>
-          <button
-            type="submit"
-            style={ Object.assign( {}, styles.topAndBottomMargin, styles.centerText, styles.roundGreenButton ) }>
-              Continue
-          </button>
-        </form>
-      </div>
+      <Prompt
+        onSubmitUser={ this.handleSubmitUser }
+        onUpdateUser={ this.handleUpdateUser }
+        header={ this.props.route.header }
+        username={ this.state.username }
+      />
     );
   }
 });
