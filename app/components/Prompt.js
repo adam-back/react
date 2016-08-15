@@ -15,7 +15,7 @@ function Prompt ( props ) {
           style={ Object.assign( {}, styles.topAndBottomMargin, styles.centerText ) }/>
         <button
           type="submit"
-          style={ Object.assign( {}, styles.topAndBottomMargin, styles.centerText, styles.roundGreenButton ) }>
+          style={ Object.assign( styles.greenBg, styles.defaultButton ) }>
             Continue
         </button>
       </form>

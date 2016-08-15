@@ -10,7 +10,7 @@ var Home = React.createClass({
         <h1>Hello from Home!</h1>
 
         <Link to='/playerOne'>
-          <button type='button' style={ styles.roundGreenButton }>Get Started</button>
+          <button type='button' style={ Object.assign( styles.defaultButton, styles.greenBg ) }>Get Started</button>
         </Link>
       </div>
     );
