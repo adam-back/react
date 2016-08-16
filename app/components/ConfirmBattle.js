@@ -15,7 +15,7 @@ function ConfirmBattle ( props ) {
       <div style={ styles.columnFlex }>
         <h1>CONFIRM BATTLE</h1>
         <PlayerList players={ props.playersInfo } />
-        <button onClick={ props.onInitiateBattle } style={ Object.assign( styles.greenBg, styles.defaultButton ) }>Initiate Battle</button>
+        <button type="button" onClick={ props.onInitiateBattle } style={ Object.assign( styles.greenBg, styles.defaultButton ) }>Initiate Battle</button>
         <RestartButton />
       </div>
     );
