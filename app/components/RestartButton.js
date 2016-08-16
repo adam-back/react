@@ -7,7 +7,7 @@ var RestartButton = React.createClass({
   render: function() {
     return (
       <Link to='/playerOne'>
-        <button type='button'  style={ Object.assign( styles.redBg, styles.defaultButton ) }>Reselect Players</button>
+        <button id='reset' type='button' style={ Object.assign( styles.defaultButton, styles.redBg ) }>Reselect Players</button>
       </Link>
     );
   }
