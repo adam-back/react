@@ -1,5 +1,5 @@
 var React = require( 'react' );
-var Results = require( '../components/Results' );
+var ResultsList = require( '../components/ResultsList' );
 var githubHelpers = require( '../utils/githubHelpers' );
 
 var ResultsContainer = React.createClass({
@@ -21,7 +21,7 @@ var ResultsContainer = React.createClass({
   render: function() {
     return (
       <div>
-        <Results scores={ this.state.scores } isLoading={ this.state.isLoading } playersInfo={ this.props.location.state.playersInfo }/>
+        <ResultsList scores={ this.state.scores } isLoading={ this.state.isLoading } playersInfo={ this.props.location.state.playersInfo }/>
       </div>
     );
   }

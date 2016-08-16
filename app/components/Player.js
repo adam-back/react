@@ -7,7 +7,7 @@ function Player ( props ) {
 
   return (
     <div style={ styles.columnFlex }>
-      {props.score && <h1>Score: { props.score }</h1>}
+      {props.score && <h2>Score: { props.score }</h2>}
       <h2>{ user.name }</h2>
       <img src={ user.avatar_url } style={ styles.squarePhoto } />
       <div>Username: { user.login }</div>
