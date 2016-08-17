@@ -1,5 +1,4 @@
 var React = require( 'react' );
-var styles = require( '../styles' );
 var Player = require( './Player' );
 var RestartButton = require( './RestartButton' );
 var FlexContainer = require( '../containers/FlexContainer' );
