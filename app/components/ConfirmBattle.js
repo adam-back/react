@@ -3,12 +3,13 @@ var RestartButton = require( './RestartButton' );
 var PlayerList = require( './PlayerList' );
 var styles = require( '../styles' );
 var FlexContainer = require( '../containers/FlexContainer' );
+var Loading = require( './Loading' );
 
 function ConfirmBattle ( props ) {
   if ( props.isLoading === true ) {
     return (
       <FlexContainer>
-        <h1>LOADING...</h1>
+        <Loading text="Stuff" speed={ 1000 }/>
       </FlexContainer>
 
     );

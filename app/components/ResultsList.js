@@ -2,12 +2,13 @@ var React = require( 'react' );
 var Player = require( './Player' );
 var RestartButton = require( './RestartButton' );
 var FlexContainer = require( '../containers/FlexContainer' );
+var Loading = require( '../components/Loading' );
 
 function ResultsList ( props ) {
   if ( props.isLoading ) {
     return (
       <FlexContainer>
-        <h1>LOADING...</h1>
+        <Loading/>
       </FlexContainer>
     );
   } else {
