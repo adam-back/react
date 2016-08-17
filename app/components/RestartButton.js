@@ -4,10 +4,18 @@ var Link = Router.Link;
 var styles = require( '../styles' );
 
 var RestartButton = React.createClass({
-  render: function() {
+  propTypes: {
+    text: React.PropTypes.string
+  },
+  getDefaultProps() {
+    return {
+      text: 'Restart'
+    };
+  },
+  render() {
     return (
       <Link to='/playerOne'>
-        <button id='reset' type='button' style={ Object.assign( styles.defaultButton, styles.redBg ) }>Reselect Players</button>
+        <button id='reset' type='button' style={ Object.assign( styles.defaultButton, styles.redBg ) }>{ this.props.text }</button>
       </Link>
     );
   }

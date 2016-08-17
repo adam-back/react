@@ -1,10 +1,11 @@
 var React = require( 'react' );
 var styles = require( '../styles' );
 var PropTypes = React.PropTypes;
+var FlexContainer = require( '../containers/FlexContainer' );
 
 function Prompt ( props ) {
   return (
-    <div style={ styles.columnFlex }>
+    <FlexContainer>
       <h1>{ props.header }</h1>
       <form style={ styles.columnFlex } onSubmit={ props.onSubmitUser }>
         <input
@@ -19,7 +20,7 @@ function Prompt ( props ) {
             Continue
         </button>
       </form>
-    </div>
+    </FlexContainer>
   );
 };
 

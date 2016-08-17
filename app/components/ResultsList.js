@@ -2,24 +2,25 @@ var React = require( 'react' );
 var styles = require( '../styles' );
 var Player = require( './Player' );
 var RestartButton = require( './RestartButton' );
+var FlexContainer = require( '../containers/FlexContainer' );
 
 function ResultsList ( props ) {
   if ( props.isLoading ) {
     return (
-      <div style={ styles.columnFlex }>
+      <FlexContainer>
         <h1>LOADING...</h1>
-      </div>
+      </FlexContainer>
     );
   } else {
     return (
-      <div style={ styles.columnFlex }>
+      <FlexContainer>
         <div style={{ display: 'flex', justifyContent: 'space-around', minWidth: '100%' }}>
           { props.playersInfo.map(function( player, index ) {
             return <Player score={ props.scores[ index ] } user={ player } key={ player.login } />
           }) }
         </div>
-        <RestartButton />
-      </div>
+        <RestartButton text='Restart Game'/>
+      </FlexContainer>
     );
   }
 };

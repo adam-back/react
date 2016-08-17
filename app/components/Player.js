@@ -1,12 +1,13 @@
 var React = require( 'react' );
 var PropTypes = React.PropTypes;
 var styles = require( '../styles' );
+var FlexContainer = require( '../containers/FlexContainer' );
 
 function Player ( props ) {
   var user = props.user;
 
   return (
-    <div style={ styles.columnFlex }>
+    <FlexContainer>
       {props.score && <h2>Score: { props.score }</h2>}
       <h2>{ user.name }</h2>
       <img src={ user.avatar_url } style={ styles.squarePhoto } />
@@ -15,7 +16,7 @@ function Player ( props ) {
       {user.company && <div>Company:
         <a href={ 'https://github.com/' + user.company.slice( 1 ) } target="_blank">{ user.company }</a>
       </div>}
-    </div>
+    </FlexContainer>
   );
 };
 

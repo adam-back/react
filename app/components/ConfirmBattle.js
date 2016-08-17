@@ -2,22 +2,24 @@ var React = require( 'react' );
 var RestartButton = require( './RestartButton' );
 var PlayerList = require( './PlayerList' );
 var styles = require( '../styles' );
+var FlexContainer = require( '../containers/FlexContainer' );
 
 function ConfirmBattle ( props ) {
   if ( props.isLoading === true ) {
     return (
-      <div style={ styles.columnFlex }>
+      <FlexContainer>
         <h1>LOADING...</h1>
-      </div>
+      </FlexContainer>
+
     );
   } else {
     return (
-      <div style={ styles.columnFlex }>
+      <FlexContainer>
         <h1>CONFIRM BATTLE</h1>
         <PlayerList players={ props.playersInfo } />
         <button type="button" onClick={ props.onInitiateBattle } style={ Object.assign( styles.defaultButton, styles.greenBg ) }>Initiate Battle</button>
-        <RestartButton />
-      </div>
+        <RestartButton text="Reselect Players"/>
+      </FlexContainer>
     );
   }
 };
