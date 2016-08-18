@@ -1,29 +1,19 @@
 # React
 
-The purpose of this repository is for me to have a place to experiment with basic React.js learning. Currently, the master branch follows the development of Tyler McGinnis' (free) [React.js Fundamentals course](http://courses.reactjsprogram.com/courses/reactjsfundamentals).
+The purpose of this repository is for me to have a place to experiment with React.js ecosystem learning.
 
-# Features
+# Projects
 
-This application takes two GitHub usernames, then displays some information about the users. The users can then battle to determine who's "ranked" higher on GitHub (really trivial algorithm).
+### [React.js Fundamentals](./React.js Fundamentals/)
 
-The tutorial uses Bootstrap, but I used flex-box because that's what I'd use in production.
+Follows Tyler McGinnis' (free) [React.js Fundamentals course](http://courses.reactjsprogram.com/courses/reactjsfundamentals). Makes a game out of users' GitHub profiles.
 
-Error handling is minimal: just `console.error`.
+### [React Router](./Router/)
 
-# Learning Points
+Learn how to use React Router from the React.js team.
 
-- Basic React
-  - Props
-  - State
-  - Routing
-  - Components
-  - Containers
-- Stateless/stateful components
-- JSX
-- Ecosystem
-  - Webpack
-  - Babel
-  - Axios
+### [Cabin](./Cabin/)
+
 
 # Run Locally
 
@@ -36,7 +26,8 @@ Error handling is minimal: just `console.error`.
 ### Steps
 
 1. Clone down to local machine then `cd react/`
-1. `npm install` from root directory.
+1. `cd React.js Fundamentals/` or whatever other project you wish to run.
+1. `npm install`.
 1. `npm start`
  - Runs webpack bundling and dev server
 1. Open your browser to [http://localhost:8080/](http://localhost:8080/)
