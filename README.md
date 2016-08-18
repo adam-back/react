@@ -10,10 +10,11 @@ Follows Tyler McGinnis' (free) [React.js Fundamentals course](http://courses.rea
 
 ### [React Router](./Router/)
 
-Learn how to use React Router from the React.js team.
+Learn how to use [React Router from the React.js team](https://github.com/reactjs/react-router-tutorial).
 
 ### [Cabin](./Cabin/)
 
+Follows the [Stream.io example](http://cabin.getstream.io/) for creating a React.js application with Redux.
 
 # Run Locally
 
