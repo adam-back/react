@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 
-export default function() {
+export default function( props ) {
   return (
     <div>
       <h1>React Router Tutorial!</h1>
@@ -13,6 +13,8 @@ export default function() {
           <Link to="repos">Repos</Link>
         </li>
       </ul>
+
+      { props.children }
     </div>
   );
 };
