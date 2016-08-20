@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 
-export default function() {
+export default function( props ) {
   return (
     <div>
       <h2>Repos</h2>
@@ -14,6 +14,8 @@ export default function() {
           <Link to='/repos/facebook/react'>React</Link>
         </li>
       </ul>
+
+      { props.children }
     </div>
   );
 }
