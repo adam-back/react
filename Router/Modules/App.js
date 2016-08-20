@@ -1,6 +1,7 @@
 import React from 'react'
-import { Link } from 'react-router'
+import { IndexLink } from 'react-router'
 import NavLink from './NavLink'
+import '../index.css'
 
 export default function( props ) {
   return (
@@ -8,10 +9,13 @@ export default function( props ) {
       <h1>React Router Tutorial!</h1>
       <ul role='nav'>
         <li>
-          <NavLink to="about">About</NavLink>
+          <IndexLink activeClassName="active" to="/">Home</IndexLink>
         </li>
         <li>
-          <NavLink to="repos">Repos</NavLink>
+          <NavLink to="/about">About</NavLink>
+        </li>
+        <li>
+          <NavLink to="/repos">Repos</NavLink>
         </li>
       </ul>
 
