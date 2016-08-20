@@ -19,29 +19,29 @@ var Loading = React.createClass({
     speed: React.PropTypes.number,
     text: React.PropTypes.string
   },
-  getDefaultProps() {
+  getDefaultProps: function() {
     return {
       speed: 300,
       text: 'Loading'
-    }
+    };
   },
-  getInitialState() {
+  getInitialState: function() {
     this.originalText = this.props.text;
     return {
       text: this.originalText
     };
   },
-  componentDidMount() {
+  componentDidMount: function() {
     this.dotdotdot = setInterval(function( that ) {
       that.setState({
         text: handleDots( that.state.text )
       });
     }, this.props.speed, this );
   },
-  componentWillUnmount() {
+  componentWillUnmount: function() {
     clearInterval( this.dotdotdot );
   },
-  render() {
+  render: function() {
     return (
       <div>
         <h1>{ this.state.text }</h1>

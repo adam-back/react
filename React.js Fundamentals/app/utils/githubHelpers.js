@@ -26,7 +26,7 @@ function getPlayerScoreInfo ( player ) {
   .then( getStars )
   .then(function( totalStars ) {
     return {
-      totalStars,
+      total: totalStars,
       followers: player.followers
     };
   });

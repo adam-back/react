@@ -7,12 +7,12 @@ var RestartButton = React.createClass({
   propTypes: {
     text: React.PropTypes.string
   },
-  getDefaultProps() {
+  getDefaultProps: function() {
     return {
       text: 'Restart'
     };
   },
-  render() {
+  render: function() {
     return (
       <Link to='/playerOne'>
         <button id='reset' type='button' style={ Object.assign( styles.defaultButton, styles.redBg ) }>{ this.props.text }</button>
