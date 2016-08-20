@@ -5,10 +5,10 @@ import Home from './Modules/Home'
 import Repos from './Modules/Repos'
 import Repo from './Modules/Repo'
 import About from './Modules/About'
-import { Router, Route, hashHistory, IndexRoute } from 'react-router'
+import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 
 render((
-  <Router history={ hashHistory }>
+  <Router history={ browserHistory }>
     <Route path='/' component={ App }>
       <IndexRoute component={ Home }/>
       <Route path='/repos' component={ Repos }>
