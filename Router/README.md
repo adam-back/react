@@ -2,14 +2,14 @@
 
 Learn how to use [React Router from the React.js team](https://github.com/reactjs/react-router-tutorial).
 
-Currently on lesson 13.
-
 # Learning Points
 
 - Production-ish server which serves static React index.html
 - Alternative browserHistory to hashHistory
 - Nested routing
 - IndexLink
+
+Next steps: server-side rendering.
 
 # Run Locally
 
