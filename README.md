@@ -12,9 +12,9 @@ Follows Tyler McGinnis' (free) [React.js Fundamentals course](http://courses.rea
 
 Learn how to use [React Router from the React.js team](https://github.com/reactjs/react-router-tutorial).
 
-### [Cabin](./Cabin/)
+### [Redux](./Redux/)
 
-Follows the [Stream.io example](http://cabin.getstream.io/) for creating a React.js application with Redux.
+Follows Dan Abramov's [Getting Started With Redux](https://egghead.io/courses/getting-started-with-redux) for creating a todo list with Redux.
 
 # Run Locally
 
