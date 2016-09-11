@@ -1,10 +1,9 @@
 var React = require( 'react' );
 var ReactDOM = require( 'react-dom' );
-var TodoApp = require( './components/TodoApp' );
+var TodoAppContainer = require( './containers/TodoAppContainer' );
 
 
 ReactDOM.render(
-  // <TodoApp />,
-  <TodoApp />,
+  <TodoAppContainer />,
   document.getElementById( 'root' )
 );

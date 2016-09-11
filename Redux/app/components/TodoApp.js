@@ -19,7 +19,7 @@ var TodoApp = React.createClass({
         <ul id='todoList'>
           {
             this.props.todos.map(function( todo ) {
-              return <Todo key={ todo.key } task={ todo.text } />
+              return <Todo key={ todo.id } text={ todo.text } />
             })
           }
         </ul>

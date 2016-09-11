@@ -8,7 +8,6 @@ var Todo = function( props ) {
 };
 
 Todo.propTypes = {
-  id: PropTypes.number.isRequired,
   text: PropTypes.string.isRequired
 };
 
