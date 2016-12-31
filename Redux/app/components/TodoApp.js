@@ -11,7 +11,7 @@ var TodoApp = function( props ) {
       <ul id='todoList'>
         {
           props.todos.map(function( todo ) {
-            return <Todo key={ todo.id } text={ todo.text } />
+            return <Todo key={ todo.id } id={ todo.id } text={ todo.text } onRemoveTodo={ props.onRemoveTodo } />
           })
         }
       </ul>
@@ -23,7 +23,8 @@ TodoApp.PropTypes = {
   todos: PropTypes.array.isRequired,
   newTask: PropTypes.string.isRequired,
   onUpdateNewTask: PropTypes.func.isRequired,
-  onAddTodo: PropTypes.func.isRequired
+  onAddTodo: PropTypes.func.isRequired,
+  onRemoveTodo: PropTypes.func.isRequired
 };
 
 module.exports = TodoApp;

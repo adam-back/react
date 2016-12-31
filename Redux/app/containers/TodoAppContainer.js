@@ -21,6 +21,13 @@ var TodoAppContainer = React.createClass({
       newTask: ''
     });
   },
+  handleRemoveTodo: function( event ) {
+    this.setState({
+      todos: this.state.todos.filter(function( todo ) {
+        return ( event.target.value !== todo.id );
+      })
+    });
+  },
   handleUpdateNewTask: function( event ) {
     this.setState({
       newTask: event.target.value
@@ -32,6 +39,7 @@ var TodoAppContainer = React.createClass({
         <TodoApp
           newTask={ this.state.newTask }
           onAddTodo={ this.handleAddTodo }
+          onRemoveTodo={ this.handleRemoveTodo }
           onUpdateNewTask={ this.handleUpdateNewTask }
           todos={ this.state.todos } />
       </div>
