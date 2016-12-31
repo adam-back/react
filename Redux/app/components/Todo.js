@@ -3,7 +3,7 @@ var PropTypes = React.PropTypes;
 
 var Todo = function( props ) {
   return (
-    <li onClick={ props.onRemoveTodo } value={ props.id }>{ props.text }</li>
+    <li onDoubleClick={ props.onRemoveTodo } value={ props.id }>{ props.text }</li>
   );
 };
 
