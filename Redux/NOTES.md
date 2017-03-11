@@ -24,3 +24,11 @@ III. More on Reducers
   1. Takes two arguments: state and action
     i. If state is undefined, reducer should return the initial state of the application
   2. If an unknown action is dispatched, return current state
+IV. Stores
+  1. Binds the three principles of Redux by holding current state, dispatching actions, and receives reducer.
+  2. Three methods:
+    a. getState
+    b. dispatch (actions)
+    c. subscribe
+      i. Callback triggers any time action has been dispatched
+      ii. Used to update UI
