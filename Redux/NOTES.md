@@ -20,3 +20,7 @@ II. Pure vs. Impure Functions
   2. Impure
     a. May have side-effects
     b. May mutate arguments
+III. More on Reducers
+  1. Takes two arguments: state and action
+    i. If state is undefined, reducer should return the initial state of the application
+  2. If an unknown action is dispatched, return current state
