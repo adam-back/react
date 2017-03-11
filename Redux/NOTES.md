@@ -8,6 +8,9 @@ I. Principals of Redux
     a. Plain JavaScript object describing how to change state
     b. Minimally, must have type key, but can have more
     c. To change state, dispatch action
+  3. Reducer
+    a. State mutations must be described by pure functions
+    b. With knowledge of previous state, receives an action, returns the next state for the whole application
 II. Pure vs. Impure Functions
   1. Pure
     a. Return value solely depends on inputs
