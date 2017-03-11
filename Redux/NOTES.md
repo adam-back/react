@@ -45,3 +45,5 @@ IV. Stores
 V. Testing Resources
   1. deepFreeze to dedect mutations
   2. expect by Michael Jackson
+
+Next, watch video 19.
