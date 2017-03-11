@@ -8,3 +8,12 @@ I. Principals of Redux
     a. Plain JavaScript object describing how to change state
     b. Minimally, must have type key, but can have more
     c. To change state, dispatch action
+II. Pure vs. Impure Functions
+  1. Pure
+    a. Return value solely depends on inputs
+      i. No side-effects, like API or database calls
+      ii. Call fn with same set of arguments, get the same return
+    b. Does not mutate arguments
+  2. Impure
+    a. May have side-effects
+    b. May mutate arguments
