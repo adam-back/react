@@ -19,14 +19,20 @@ II. Pure vs. Impure Functions
     b. Does not mutate arguments
     c. Ways to avoid mutation
       i. Objects: Object.assign, spread (...)
-      ii. Arrays: concat, slice, spread
+      ii. Arrays: concat, slice, spread, map
   2. Impure
     a. May have side-effects
     b. May mutate arguments
 III. More on Reducers
   1. Takes two arguments: state and action
-    i. If state is undefined, reducer should return the initial state of the application
+    a. If state is undefined, reducer should return the initial state of the application
   2. If an unknown action is dispatched, return current state
+  3. Composition
+    a. Different reducers to update different parts of the state tree
+    b. Still one single, top-level reducer
+    c. Redux provides fn called combineReducers to accomplish this
+      i. Takes object as argument with keys for state mapped to reducers:
+      { todos: todos, visibilityFilter: visibilityFilter }, where todos key is the name of the state and todos value is name of the reducer
 IV. Stores
   1. Created by Redux.createStore fn
   2. Binds the three principles of Redux by holding current state, dispatching actions, and receives reducer.
