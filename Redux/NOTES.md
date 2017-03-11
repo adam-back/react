@@ -17,6 +17,9 @@ II. Pure vs. Impure Functions
       i. No side-effects, like API or database calls
       ii. Call fn with same set of arguments, get the same return
     b. Does not mutate arguments
+    c. Ways to avoid mutation
+      i. Objects: Object.assign, spread (...)
+      ii. Arrays: concat, slice, spread
   2. Impure
     a. May have side-effects
     b. May mutate arguments
@@ -25,10 +28,14 @@ III. More on Reducers
     i. If state is undefined, reducer should return the initial state of the application
   2. If an unknown action is dispatched, return current state
 IV. Stores
-  1. Binds the three principles of Redux by holding current state, dispatching actions, and receives reducer.
-  2. Three methods:
+  1. Created by Redux.createStore fn
+  2. Binds the three principles of Redux by holding current state, dispatching actions, and receives reducer.
+  3. Three methods:
     a. getState
     b. dispatch (actions)
     c. subscribe
       i. Callback triggers any time action has been dispatched
       ii. Used to update UI
+V. Testing Resources
+  1. deepFreeze to dedect mutations
+  2. expect by Michael Jackson
