@@ -48,7 +48,13 @@ V. Testing Resources
 VI. Refactor
   1. Presentational components
     a. For example, a component which is only concerned with rendering, how it looks. onClick will be passed in by a prop.
+    b. User react-redux module to use Provider for passing store as a prop to children and grandchildren via `this.context`.
+      i. Don't forget to add contextTypes.
   2. Container components
     a. Specify functionality, like callbacks for clicks.
+    b. Use `react-redux.connect()` to generate components and avoid the context API.
+  3. Action Creators
+    a. Functions which return an object to be dispatched.
+    b. Normally placed separately from reducers and components.
 
 Next, watch video 27.

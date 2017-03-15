@@ -1,5 +1,4 @@
-var React = require( 'react' );
-var PropTypes = React.PropTypes;
+import { PropTypes } from 'React';
 
 var Todo = function( props ) {
   return (
