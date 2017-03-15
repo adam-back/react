@@ -45,5 +45,10 @@ IV. Stores
 V. Testing Resources
   1. deepFreeze to dedect mutations
   2. expect by Michael Jackson
+VI. Refactor
+  1. Presentational components
+    a. For example, a component which is only concerned with rendering, how it looks. onClick will be passed in by a prop.
+  2. Container components
+    a. Specify functionality, like callbacks for clicks.
 
-Next, watch video 19.
+Next, watch video 27.
