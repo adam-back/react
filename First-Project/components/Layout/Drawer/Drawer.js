@@ -11,6 +11,8 @@
 import React from 'react';
 import Drawer from 'material-ui/Drawer'
 import AppBar from 'material-ui/AppBar'
+import MenuItem from 'material-ui/MenuItem'
+import Link from '../../Link'
 
 class NavDrawer extends React.Component {
   render() {
@@ -21,6 +23,16 @@ class NavDrawer extends React.Component {
             style={{backgroundColor: '#0090d0'}}
             iconStyleLeft={{ display: 'none'}}>
           </AppBar>
+
+          <MenuItem
+            primaryText='Home'
+            containerElement={ <Link to='/'/> }/>
+          <MenuItem
+            primaryText='About'
+            containerElement={ <Link to='/about'/> }/>
+          <MenuItem
+            primaryText='New'
+            containerElement={ <Link to='/new'/> }/>
         </Drawer>
       </div>
     );
