@@ -15,8 +15,8 @@ class Header extends React.Component {
   render() {
     return (
       <AppBar
-        title='Pattern.org'
-        style={{backgroundColor: '#0090d0'}}
+        title='Pattern.org Biologistics'
+        style={{backgroundColor: '#0090d0', paddingLeft: 236}}
       />
     );
   }
