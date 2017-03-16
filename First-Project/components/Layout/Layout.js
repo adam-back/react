@@ -23,7 +23,7 @@ class Layout extends React.Component {
 
   render() {
     return (
-      <div>
+      <div style={{ backgroundColor: '#efefef', height: '100vh' }}>
         <Header/>
         <Drawer/>
         <div {...this.props} className={cx(s.content, this.props.className)} style={{ paddingLeft: 236 }}/>
