@@ -10,9 +10,9 @@
 
 import React, { PropTypes } from 'react';
 import Layout from '../../components/Layout';
+import CaseTable from '../../components/Cases/CaseTable/CaseTable';
 import s from './styles.css';
 import { title, html } from './index.md';
-
 class HomePage extends React.Component {
 
   static propTypes = {
@@ -27,15 +27,7 @@ class HomePage extends React.Component {
     return (
       <Layout className={s.content}>
         <div dangerouslySetInnerHTML={{ __html: html }} />
-        <h4>Articles</h4>
-        <ul>
-          {this.props.articles.map((article, i) =>
-            <li key={i}><a href={article.url}>{article.title}</a> by {article.author}</li>
-          )}
-        </ul>
-        <p>
-          <br /><br />
-        </p>
+        <CaseTable />
       </Layout>
     );
   }
