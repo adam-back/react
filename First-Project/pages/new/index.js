@@ -12,6 +12,7 @@ import React from 'react';
 import Layout from '../../components/Layout';
 import s from './styles.css';
 import { title, html } from './index.md';
+import RaisedButton from 'material-ui/RaisedButton';
 
 class NewPage extends React.Component {
 
@@ -23,6 +24,7 @@ class NewPage extends React.Component {
     return (
       <Layout className={s.content}>
         <h1>{title}</h1>
+        <RaisedButton label='Pretty Cool' />
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </Layout>
     );
