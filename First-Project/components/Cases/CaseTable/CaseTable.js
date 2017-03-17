@@ -4,14 +4,18 @@ import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColu
 
 const TableExampleSimple = () => (
   <Table>
-    <TableHeader>
+    <TableHeader
+      adjustForCheckbox={false}
+      enableSelectAll={false}
+      displaySelectAll={false}>
       <TableRow>
         <TableHeaderColumn>ID</TableHeaderColumn>
         <TableHeaderColumn>Name</TableHeaderColumn>
         <TableHeaderColumn>Status</TableHeaderColumn>
       </TableRow>
     </TableHeader>
-    <TableBody>
+    <TableBody
+      displayRowCheckbox={false}>
       <TableRow>
         <TableRowColumn>1</TableRowColumn>
         <TableRowColumn>John Smith</TableRowColumn>
