@@ -3,10 +3,6 @@ import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColu
 import Row from './Row';
 
 const TableExampleSimple = (props) => {
-  const rows = props.records.map(( record ) =>
-    <Row record={record} />
-  );
-
   return (
     <div>
       <Table>
@@ -22,7 +18,9 @@ const TableExampleSimple = (props) => {
         </TableHeader>
         <TableBody
           displayRowCheckbox={false}>
-          {rows}
+          {props.records.map(( record ) =>
+            <Row record={record} />
+          )}
         </TableBody>
       </Table>
     </div>

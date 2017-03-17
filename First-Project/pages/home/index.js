@@ -13,6 +13,15 @@ import Layout from '../../components/Layout';
 import CaseTable from '../../components/Cases/CaseTable/CaseTable';
 import s from './styles.css';
 import { title, html } from './index.md';
+
+
+const records = [
+  { id: 1, name: 'Adam Jaffe Back', employmentStatus: 'Employed' },
+  { id: 4, name: 'Anna Jaffe Back', employmentStatus: 'Employed' },
+  { id: 5, name: 'Baby Jaffe Back', employmentStatus: 'Unemployed' },
+  { id: 2, name: 'Benji Jaffe Back', employmentStatus: 'Unemployed' }
+];
+
 class HomePage extends React.Component {
 
   static propTypes = {
@@ -23,11 +32,12 @@ class HomePage extends React.Component {
     document.title = title;
   }
 
+
   render() {
     return (
       <Layout className={s.content}>
         <div dangerouslySetInnerHTML={{ __html: html }} />
-        <CaseTable />
+        <CaseTable records={records} />
       </Layout>
     );
   }
