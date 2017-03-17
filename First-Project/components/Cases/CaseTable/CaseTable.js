@@ -1,43 +1,32 @@
 import React from 'react';
 import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
+import Row from './Row';
 
+const TableExampleSimple = (props) => {
+  const rows = props.records.map(( record ) =>
+    <Row record={record} />
+  );
 
-const TableExampleSimple = () => (
-  <Table>
-    <TableHeader
-      adjustForCheckbox={false}
-      enableSelectAll={false}
-      displaySelectAll={false}>
-      <TableRow>
-        <TableHeaderColumn>ID</TableHeaderColumn>
-        <TableHeaderColumn>Name</TableHeaderColumn>
-        <TableHeaderColumn>Status</TableHeaderColumn>
-      </TableRow>
-    </TableHeader>
-    <TableBody
-      displayRowCheckbox={false}>
-      <TableRow>
-        <TableRowColumn>1</TableRowColumn>
-        <TableRowColumn>John Smith</TableRowColumn>
-        <TableRowColumn>Employed</TableRowColumn>
-      </TableRow>
-      <TableRow>
-        <TableRowColumn>2</TableRowColumn>
-        <TableRowColumn>Randal White</TableRowColumn>
-        <TableRowColumn>Unemployed</TableRowColumn>
-      </TableRow>
-      <TableRow>
-        <TableRowColumn>3</TableRowColumn>
-        <TableRowColumn>Stephanie Sanders</TableRowColumn>
-        <TableRowColumn>Employed</TableRowColumn>
-      </TableRow>
-      <TableRow>
-        <TableRowColumn>4</TableRowColumn>
-        <TableRowColumn>Steve Brown</TableRowColumn>
-        <TableRowColumn>Employed</TableRowColumn>
-      </TableRow>
-    </TableBody>
-  </Table>
-);
+  return (
+    <div>
+      <Table>
+        <TableHeader
+          adjustForCheckbox={false}
+          enableSelectAll={false}
+          displaySelectAll={false}>
+          <TableRow>
+            <TableHeaderColumn>ID</TableHeaderColumn>
+            <TableHeaderColumn>Name</TableHeaderColumn>
+            <TableHeaderColumn>Status</TableHeaderColumn>
+          </TableRow>
+        </TableHeader>
+        <TableBody
+          displayRowCheckbox={false}>
+          {rows}
+        </TableBody>
+      </Table>
+    </div>
+  );
+};
 
 export default TableExampleSimple;
