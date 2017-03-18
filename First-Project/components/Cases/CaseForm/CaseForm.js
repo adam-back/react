@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { connect } from 'react-redux';
 import TextField from 'material-ui/TextField';
 import SelectField from 'material-ui/SelectField';
 import MenuItem from 'material-ui/MenuItem';
@@ -6,21 +7,21 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 class CaseForm extends React.Component {
   state = {
-    value: null,
-    name: null
-  };
+    name: null,
+    value: null
+  }
 
   handleSelectChange = ( event, index, value ) => this.setState({ value });
   handleNameChange = ( event, newText ) => this.setState({ name: newText });
-
   onSubmitForm = (event) => {
-
+    this.props.onSubmitForm( this.state.name, this.state.value );
+    // reset form
+    this.setState({ name: null, value: null });
   }
 
   render() {
-    console.log( 'staet', this.state );
     return (
-      <form style={{paddingTop: 28}}>
+      <form style={{paddingTop: 28}} onSubmit={this.onSubmitForm}>
         <TextField onChange={this.handleNameChange} hintText='Name'></TextField>
         <br/>
         <SelectField
@@ -35,6 +36,6 @@ class CaseForm extends React.Component {
       </form>
     );
   }
-};
+}
 
 export default CaseForm;

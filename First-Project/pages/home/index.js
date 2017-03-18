@@ -11,6 +11,7 @@
 import React, { PropTypes } from 'react';
 import Layout from '../../components/Layout';
 import CaseTable from '../../components/Cases/CaseTable/CaseTable';
+import CaseContainer from '../../containers/CaseContainer';
 import s from './styles.css';
 import { title, html } from './index.md';
 
@@ -23,11 +24,6 @@ const records = [
 ];
 
 class HomePage extends React.Component {
-
-  static propTypes = {
-    articles: PropTypes.array.isRequired,
-  };
-
   componentDidMount() {
     document.title = title;
   }
@@ -38,6 +34,7 @@ class HomePage extends React.Component {
       <Layout className={s.content}>
         <div dangerouslySetInnerHTML={{ __html: html }} />
         <CaseTable records={records} />
+        <CaseContainer />
       </Layout>
     );
   }
